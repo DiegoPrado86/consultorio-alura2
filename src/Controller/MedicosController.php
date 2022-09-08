@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+
 class MedicosController extends AbstractController
 {
     private EntityManagerInterface $entityManager;
@@ -47,8 +48,8 @@ class MedicosController extends AbstractController
         $repositorioMedicos = $this
             ->entityManager
             ->getRepository(Medico::class);
-           $medicoList=$repositorioMedicos->findAll();
-           return new JsonResponse($medicoList);
+        $medicoList=$repositorioMedicos->findAll();
+        return new JsonResponse($medicoList);
     }
 
 

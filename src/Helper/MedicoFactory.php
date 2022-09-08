@@ -7,14 +7,13 @@ use App\Entity\Medico;
 class MedicoFactory
 {
 
-
     public function criarMedico(string $json): Medico
     {
-        $dadosEmJson = json_decode($json);
+        $dadoEmJson = json_decode($json);
 
-        $medico =new Medico();
-        $medico->crm = $dadosEmJson->crm;
-        $medico->nome = $dadosEmJson->nome;
+        $medico = new Medico();
+        $medico->crm = $dadoEmJson->crm;
+        $medico->nome = $dadoEmJson->nome;
 
         return $medico;
     }
